@@ -1,6 +1,6 @@
 var files = [];
 
-var alert= document.querySelector('.alert');
+var Toast= document.querySelector('.alert');
 
 
 var firebaseForm = {};
@@ -22,7 +22,7 @@ firebaseForm.submit = () => {
 const form= document.querySelector('form');
 form.addEventListener('submit', function (e) {
   e.preventDefault();
-  alert.style.display = "block";
+  Toast.style.display = "block";
 //document.getElementById("send").addEventListener("submit", function () {
   // 1. Submit Information to firestore database
   //call a function to initiate submit
@@ -59,7 +59,7 @@ form.addEventListener('submit', function (e) {
           ).innerHTML += `${files[i].name} uploaded <br />`;
           //if(document.getElementById("uploading").innerText.includes('uploaded')){
           if (document.getElementById("progress").value === 100) {
-            alert.style.display = "none";
+            Toast.style.display = "none";
             alert(name + "'s details uploaded successfully.")
             firebaseForm.clearForm();
             console.log('var downloadURL = ' + upload.snapshot.downloadURL);
