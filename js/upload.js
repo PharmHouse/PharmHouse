@@ -64,7 +64,7 @@ form.addEventListener('submit', function (e) {
             firebaseForm.clearForm();
             console.log('var downloadURL = ' + upload.snapshot.downloadURL);
           } else {
-            alert('Something went wrong!');
+            console.log('uploading');
           }
         }
       );
