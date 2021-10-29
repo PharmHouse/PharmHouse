@@ -27,7 +27,7 @@ form.addEventListener('submit', function (e) {
   // 1. Submit Information to firestore database
   //call a function to initiate submit
   //checks if files are selected
-  if (files.length != 0) {
+  if (files.length) {
     //Loops through all the selected files
     for (let i = 0; i < files.length; i++) {
       //create a storage reference
@@ -101,17 +101,14 @@ firebaseForm.uploadToFirestore = () => {
     checked = true;
     selected = ele[i].value;
   }
-  console.log(checked, selected)
-  console.log({
-    name, email, Phone, optional, Address, referral, selected, orderDate
-  })
+
   let obj = {
     name, email, Phone, optional, Address, referral, selected, orderDate
   };
 
   db.collection("Medical").doc(name).set(obj).then(() => { console.log("Uploaded to firestore") })
     .catch((e) => {
-      console.log(e);
+      console.error(e);
       alert('Something went wrong from your side.')
     });
 }
