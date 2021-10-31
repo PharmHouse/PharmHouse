@@ -113,7 +113,7 @@ a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
 }
 
 .section-header span {
-  font-size: 60px;
+  font-size: 65px;
   color: rgba(0, 0, 0, 0.07);
   z-index: 2;
   font-family: 'Montserrat', sans-serif;
@@ -129,7 +129,7 @@ a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
    2.2 Buttons
    ========================================================================== */
 .btn {
-  font-size: 14px;
+  font-size: 15px;
   padding: 10px 30px;
   border-radius: 30px;
   font-weight: 400;
@@ -158,7 +158,7 @@ a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
 }
 
 .btn-common:hover {
-  color: #fff;
+  color: #ffffff;
 }
 
 .btn-effect {
